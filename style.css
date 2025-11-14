@@ -1,0 +1,262 @@
+@charset "UTF-8";
+body {
+    /* font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;*/
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    background:#151a40;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    transition: opacity 0.6s ease;
+  }
+  
+  header {
+    background: #fff;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #eee;
+  }
+  
+  /*  h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    border-left: 6px solid #4aa3df;
+    padding-left: 0.5em;
+  } */
+  
+  .main-visual {
+    text-align: center;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .about p {
+    line-height: 1.8;
+    color: #ffffff;
+  }
+  
+  .quiz-btn {
+    background: #e32168;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .quiz-btn:hover {
+    background: #bbe12a;
+  }
+  
+  /* ---- Word List ---- */
+  .word-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+  
+  .word-card {
+    background: #bbe12a;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px white;
+    transition: 0.25s ease;
+    cursor: pointer; /* ←追加！クリックできる見た目に */
+  }
+  
+  .word-card:hover {
+    background: #2fc4a6;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ←影を少し強めにして立体感 */
+  }
+  
+  
+  footer {
+    background: #fff;
+    border-top: 1px solid #eee;
+    padding: 1rem;
+    text-align: center;
+    color: #888;
+  }
+  
+  /* フェードアウト効果 */
+  .fade-out {
+    opacity: 0;
+  }
+  
+  
+  /* quiz page */
+  header {
+    background: #e32168;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #0d0808;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    padding-left: 0.5em;
+  }
+
+  .quiz-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #151a40;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgb(255, 17, 215);
+  }
+  
+  .choice {
+    display: block;
+    width: 100%;
+    background: #2fc4a6;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 1rem;
+  }
+  
+  .choice:hover {
+    background: #ffef09;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .explanation, .usage {
+    background: #151a40;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgb(240, 255, 33);
+    text-align: left;
+  }
+  
+  .next-btn-area {
+    text-align: right;
+    margin-top: 1.5rem;
+  }
+  
+  .next-btn {
+    background: #bbe12a;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .next-btn:hover {
+    background: #859f1c;
+  }
+
+
+  /* ---- Navigation Buttons ---- */
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  .nav-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #bbe12a;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    transition: 0.2s ease;
+  }
+  
+  .nav-btn:hover {
+    background: #859f1c;
+  }
+  
+
+/* ---- Next/Prev Button Area ---- */
+.next-btn-area {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .next-btn, .prev-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #f5f5f5;
+    color: #333;
+    padding: 0.9rem 1.6rem;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+  }
+  
+  .next-btn:hover, .prev-btn:hover {
+    background: #e2e2e2;
+    transform: translateY(-2px);
+  }
+  
+  /* --- 初期状態では非表示 --- */
+.hidden {
+    display: none;
+  }
+  
+  /* --- 解説表示後に出る「次へ」「前へ」ボタンエリア --- */
+  .next-btn-area {
+    display: none;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .next-btn-area.show {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .next-btn,
+  .prev-btn {
+    display: inline-block;
+    background-color: #bbe12a;
+    color: #fff;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .next-btn:hover,
+  .prev-btn:hover {
+    background: #859f1c;
+
+  }
+  
+  /* --- トップに戻るボタンは常に中央 --- */
+  .nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+
