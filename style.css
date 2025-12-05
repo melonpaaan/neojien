@@ -2,14 +2,22 @@
 body {
     /* font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;*/
     font-family: "Zen Maru Gothic", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
+    font-style: normal;
     background:#151a40;
     margin: 0;
     padding: 0;
     color: #ffffff;
     transition: opacity 0.6s ease;
-  }
+}
+
+@media only screen and (max-width: 480px) {  
+    body{
+        width: 0.6em;
+    }
+ }
   
+
   header {
     background: #fff;
     padding: 1rem 2rem;
@@ -38,9 +46,12 @@ body {
     text-align: center;
   }
   
+  
   .about p {
-    line-height: 1.8;
+    margin-right: auto;
+    line-height: 2.0rem;
     color: #ffffff;
+    font-size: 20px;
   }
   
   .quiz-btn {
@@ -60,6 +71,17 @@ body {
   }
   
   /* ---- Word List ---- */
+.word-heading{
+    background-color: red;
+}
+
+/* PC サイズ */
+@media only screen and (min-width: 640px) {  
+    .word-heading{
+        background-color: rgb(34, 20, 237);
+    }
+ }
+
   .word-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
